@@ -1,2 +1,5 @@
 rem pip install pdfCropMargins --upgrade
-pdf-crop-margins.exe c:/temp/in.pdf -o c:/temp/eti_cropped.pdf
+docker run -it -v c:/temp:/temp pdfcrop
+cd C:\Users\bernhard.koenig\Documents\Repositories\pdfcrop.py
+docker run -it -v c:/temp:/temp pdfcrop
+rem run docker build . -t pdfcrop #in case the pdfcrop image does not exist locally
